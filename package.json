@@ -1,0 +1,23 @@
+{
+  "name": "motion-assignment",
+  "version": "1.0.0",
+  "description": "Nodejs CLI interacting with the Meta API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "build": "tsc",
+    "dev:build": "tsc -w",
+    "dev:run": "nodemon ./dist/index.js",
+    "dev": "concurrently npm:dev:*"
+  },
+  "author": "Jimmy Houle",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.22",
+    "nodemon": "^3.1.0",
+    "typescript": "^5.3.3"
+  }
+}

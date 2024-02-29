@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const node_events_1 = require("node:events");
+const native_event_handler_1 = require("./lib/cli/event-handler/native-event-handler");
+const native_drawer_1 = require("./lib/cli/drawer/native-drawer");
+const cli_1 = require("./lib/cli/cli");
+const eventEmitter = new node_events_1.EventEmitter();
+const drawer = new native_drawer_1.NativeDrawer();
+const eventHandler = new native_event_handler_1.NativeEventHandler(drawer);
+new cli_1.Cli(eventEmitter, eventHandler).init();
